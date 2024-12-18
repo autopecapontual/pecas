@@ -1,96 +1,37 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Página Responsiva</title>
-  <link rel="stylesheet" type="text/css" href="css/style.css">
-
+  <title>Site</title>
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+    }
+    
+    body {
+      overflow: hidden;
+    }
+    
+    .tela-cheia {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #fff;
+    }
+  </style>
 </head>
 <body>
-  <div class="topo">
-    <i class="voltar">&#8592;</i>
-    <span class="titulo">ENTRAR</span>
-    <i class="alerta">&#9888;</i>
+  <div class="tela-cheia">
+    <!-- Conteúdo aqui -->
+    <h1>Bem-vindo ao meu site!</h1>
+    <button onclick="document.body.requestFullscreen()">Tela Cheia</button>
   </div>
-  <hr>
-  <div class="box">
- 	<img class="imgAcesso" src="images/acesso.png">
- 	<div class="textAcesso">Esta é a sua primeira vez acessando nosso app</div>
-  <a href="" class="linkSenha">Crie sua senha  ></a>
-</div>
-  </div>
-  <div>
-    <div class="txtAcessar">Para <b>acessar o aplicativo,</b> preencha os dados:</div>
-
-    <input type="text" class="inputcpf" name="" placeholder="000.000.000-00">
-
-    <div>
-      
-    <label class="switch">
-    <input type="checkbox" id="toggle">
-    <span class="slider"></span>
-  </label>
-
-  <div class="txtLembrar">Lembrar CPF</div>
-
-
-    </div>
-
-  </div>
-
-
-  <div class="boxInput">
-    <div class="txtSenhaAcesso">Senha de acesso</div>
-  <div style="width: 10px;">
-     <div class="container">
-        <input type="text" id="senha" maxlength="6" style="opacity: 0; width: 0; height: 0; border: none; padding: 0;" />
-        <div class="bolinhas">
-            <span class="bolinha"></span>
-            <span class="bolinha"></span>
-            <span class="bolinha"></span>
-            <span class="bolinha"></span>
-            <span class="bolinha"></span>
-            <span class="bolinha"></span>
-        </div>
-    </div>
-
-  </div>
-
-
-
-</div>
-
- <div class="linkEsqueciSenha">
-    <a href="">Esqueci a senha  ></a>
-  </div>
-
-
-  <div>
-    <button class="btnEntrar">Entrar</button>
-  </div>
-
-
-    <script>
-        const senhaInput = document.getElementById('senha');
-        const bolinhas = document.querySelectorAll('.bolinha');
-
-        // Foco automático no input ao clicar nas bolinhas
-        bolinhas.forEach((bolinha) => {
-            bolinha.addEventListener('click', () => {
-                senhaInput.focus();
-            });
-        });
-
-        senhaInput.addEventListener('input', () => {
-            bolinhas.forEach((bolinha, index) => {
-                if (index < senhaInput.value.length) {
-                    bolinha.classList.add('preenchida');
-                } else {
-                    bolinha.classList.remove('preenchida');
-                }
-            });
-        });
-    </script>
+  <script>
+    document.body.requestFullscreen();
+  </script>
 </body>
 </html>

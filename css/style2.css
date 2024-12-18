@@ -21,7 +21,7 @@
     }
     
     .titulo {
-      font-size: 12px;
+      font-size: 15px;
       font-family: sans-serif;
       font-weight: bold;
       color: #333;
@@ -109,21 +109,39 @@ input:checked + .slider:before {
 }
 
 .txtAcessar {
-  margin-top: -5px;
+  text-align: center;
+  margin-top: 145px;
   margin-left: 10px;
   font-family: sans-serif;
-  font-size: 14px;
+  font-size: 19px;
 }
 
-
-.inputcpf {
-  margin-top: 19px;
+.txtsubAcessar {
+  text-align: center;
+  margin-top: 10px;
   margin-left: 10px;
-  width: 93%;
+  font-family: sans-serif;
+  font-size: 12px;
+  color: #757982;
+}
+
+.inputsenha{
+  position: absolute;
+  margin-top: 30px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  max-height: 100vh;
+  object-fit: contain;
+  
+  margin-left: 10px;
+  width: 45%;
   height: 45px;
   border-radius: 8px;
   border: 1px solid #ccc;
-
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 28px;
 }
 
 
@@ -215,7 +233,7 @@ input::placeholder {
       font-size: 12px;
     }
 
-  
+   
     footer {
   position: fixed;
   bottom: 0;
@@ -227,7 +245,7 @@ input::placeholder {
 }
 
 .btnEntrar {
-  margin-top: 28px;
+  margin-top: 150px;
   margin-left: 10px;
   width: 95%;
   height: 40px;
@@ -236,6 +254,8 @@ input::placeholder {
   border-radius: 10px;
   background-color: #1D5AC6;
   color: white;
+  font-family: sans-serif;
+  
   cursor: pointer;
 }
 
@@ -247,7 +267,40 @@ input::placeholder {
   }
 }
 
- 
+ button.desabilitado {
+      background-color: #ccc;
+      color: #666;
+    }
+    
+    button.habilitado {
+      background-color: #007bff;
+      color: #fff;
+    }
+
+
+    input[type="text"] {
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+    }
+    
+    button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    
+    button.desabilitado {
+      background-color: #ccc;
+      color: #666;
+    }
+    
+    button.habilitado {
+      background-color: #007bff;
+      color: #fff;
+    }
 
 
 
@@ -264,10 +317,18 @@ input::placeholder {
     
 .imgSenha4 {
   position: absolute;
-  top: 50%;
+  margin-top: 60px;
   left: 50%;
   transform: translate(-50%, -50%);
   max-width: 100%;
   max-height: 100vh;
   object-fit: contain;
+}
+
+
+.txtSenha4 {
+  
+  
+  font-family: sans-serif;
+  font-size: 14px;
 }

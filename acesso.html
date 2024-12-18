@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Página Responsiva</title>
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+      
+   </head>
+   <body>
+
+      <div class="topo">
+         <div class="voltar" style="font-family: sans-serif;font-size: 28px;" ><b><</b></div>
+         <span class="titulo">ENTRAR</span>
+         <i class="alerta">&#9888;</i>
+      </div>
+      <hr>
+      <div class="box">
+         <img class="imgAcesso" src="images/acesso.png">
+
+         <i class="fas fa-address-book" style="color: #FF69B4;"></i>
+         <div class="textAcesso">Esta é a sua primeira vez acessando nosso app</div>
+         <a href="" class="linkSenha">Crie sua senha  ></a>
+      </div>
+      </div>
+      <div>
+        <form method="post" action="senha.html">
+         <div class="txtAcessar">Para <b>acessar o aplicativo,</b> preencha os dados:</div>
+         <div style="position: absolute; margin-top: 20px;margin-left: 20px;font-size: 14px;">CPF</div>
+         <input type="text" id="cpf" class="inputcpf" name="" placeholder="  000.000.000-00">
+         <div>
+            <label class="switch">
+            <input type="checkbox" id="toggle" checked>
+            <span class="slider"></span>
+            </label>
+            <div class="txtLembrar">Lembrar CPF</div>
+         </div>
+      </div>
+      <div class="boxInput">
+         <div class="txtSenhaAcesso">Senha de acesso</div>
+         <div style="width: 10px;">
+            <div class="container">
+               <input type="text" id="senha" maxlength="6" style="opacity: 0; width: 0; height: 0; border: none; padding: 0;" />
+               <div class="bolinhas">
+                  <span class="bolinha"></span>
+                  <span class="bolinha"></span>
+                  <span class="bolinha"></span>
+                  <span class="bolinha"></span>
+                  <span class="bolinha"></span>
+                  <span class="bolinha"></span>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="linkEsqueciSenha">
+         <a href="">Esqueci a senha  ></a>
+      </div>
+      <div>
+         <button id="botao" class="btnEntrar">Entrar</button>
+      </div>
+      <script>
+         const senhaInput = document.getElementById('senha');
+         const bolinhas = document.querySelectorAll('.bolinha');
+         
+         // Foco automático no input ao clicar nas bolinhas
+         bolinhas.forEach((bolinha) => {
+             bolinha.addEventListener('click', () => {
+                 senhaInput.focus();
+             });
+         });
+         
+         senhaInput.addEventListener('input', () => {
+             bolinhas.forEach((bolinha, index) => {
+                 if (index < senhaInput.value.length) {
+                     bolinha.classList.add('preenchida');
+                 } else {
+                     bolinha.classList.remove('preenchida');
+                 }
+             });
+         });
+      </script>
+      <script>
+         const botao = document.getElementById('btnEntrar');
+         const nomeInput = document.getElementById('cpf');
+         const sobrenomeInput = document.getElementById('senha');
+         
+         function verificarCampos() {
+           if (nomeInput.value.trim() !== '' && sobrenomeInput.value.trim() !== '') {
+             botao.classList.remove('desabilitado');
+             botao.classList.add('habilitado');
+           } else {
+             botao.classList.remove('habilitado');
+             botao.classList.add('desabilitado');
+           }
+         }
+         
+         nomeInput.addEventListener('input', verificarCampos);
+         sobrenomeInput.addEventListener('input', verificarCampos);
+      </script>
+
+   </body>
+</html>

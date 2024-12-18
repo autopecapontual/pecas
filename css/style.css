@@ -201,5 +201,41 @@ input::placeholder {
       margin-top: 15px;
       margin-left: 12px;
       font-family: sans-serif;
-    
+
     }
+
+
+    .linkEsqueciSenha {
+      margin-left: 23px;
+    }
+
+    .btnEntrar {
+
+    }
+
+    footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #007bff;
+  text-align: center;
+  padding: -30px;
+}
+
+.btnEntrar {
+  margin-top: 100px;
+  margin-left: 10px;
+  width: 95%;
+  height: 40px;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+  background-color: blue;
+  color: #333;
+  cursor: pointer;
+}
+
+.btnEntrar:hover {
+  background-color: #ccc;
+}

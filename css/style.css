@@ -39,7 +39,7 @@
     
     .box {
       width: 97%;
-      height: 130px; /* mantém proporção quadrada */
+      height: 110px; /* mantém proporção quadrada */
       margin: 20px auto;
       background-color: #fff;
       border: 1px solid #ddd;

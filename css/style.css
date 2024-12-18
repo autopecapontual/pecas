@@ -150,3 +150,56 @@ input:checked + .slider:before {
   font-size: 14px;
 
 }
+
+
+input::placeholder {
+  font-size: 16px; 
+}
+
+.container {
+  margin-top: 50px;
+  margin-left: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 10px;
+}
+
+.bolinhas {
+    display: flex;
+    gap: 10px;
+}
+
+.bolinha {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    cursor: pointer; /* Adiciona ponteiro de mouse */
+}
+
+.bolinha.preenchida {
+    background-color: #007bff;
+}
+
+
+
+.boxInput {
+      width: 92%;
+      height: 90px; /* mantém proporção quadrada */
+      margin: 20px auto;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+     
+    }
+
+
+    .txtSenhaAcesso {
+      position: absolute;
+      margin-top: 15px;
+      margin-left: 12px;
+      font-family: sans-serif;
+    
+    }

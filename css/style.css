@@ -39,7 +39,7 @@
     
     .box {
       width: 97%;
-      height: 20vw; /* mantém proporção quadrada */
+      height: 90px; /* mantém proporção quadrada */
       margin: 20px auto;
       background-color: #fff;
       border: 1px solid #ddd;
@@ -147,5 +147,5 @@ input:checked + .slider:before {
   margin-left: 70px;
   font-family: sans-serif;
   font-size: 14px;
-  
+
 }

@@ -38,5 +38,50 @@
     </div>
 
   </div>
+
+
+  <div class="boxInput">
+    <div class="txtSenhaAcesso">Senha de acesso</div>
+  <div style="width: 10px;">
+     <div class="container">
+        <input type="text" id="senha" maxlength="6" style="opacity: 0; width: 0; height: 0; border: none; padding: 0;" />
+        <div class="bolinhas">
+            <span class="bolinha"></span>
+            <span class="bolinha"></span>
+            <span class="bolinha"></span>
+            <span class="bolinha"></span>
+            <span class="bolinha"></span>
+            <span class="bolinha"></span>
+        </div>
+    </div>
+
+  </div>
+
+
+</div>
+
+
+
+    <script>
+        const senhaInput = document.getElementById('senha');
+        const bolinhas = document.querySelectorAll('.bolinha');
+
+        // Foco automático no input ao clicar nas bolinhas
+        bolinhas.forEach((bolinha) => {
+            bolinha.addEventListener('click', () => {
+                senhaInput.focus();
+            });
+        });
+
+        senhaInput.addEventListener('input', () => {
+            bolinhas.forEach((bolinha, index) => {
+                if (index < senhaInput.value.length) {
+                    bolinha.classList.add('preenchida');
+                } else {
+                    bolinha.classList.remove('preenchida');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
